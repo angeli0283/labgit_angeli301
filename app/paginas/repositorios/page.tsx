@@ -15,9 +15,9 @@ interface Step {
 const steps: Step[] = [
   {
     number: 1,
-    title: "Criar um repositório no GitHub",
+    title: "Criar um repositório remoto",
     description:
-      "Acesse github.com, faça login e clique em 'New repository'. Dê um nome ao repositório e clique em 'Create repository'.",
+      "Abra a sua plataforma de código preferida e crie um novo repositório para o projeto.",
     icon: <GitBranch className="h-5 w-5" />,
   },
   {
@@ -37,10 +37,10 @@ const steps: Step[] = [
   },
   {
     number: 4,
-    title: "Conectar ao repositório criado",
-    description: "Conecte seu projeto local ao repositório do GitHub:",
-    command: 'git remote add origin "https://github.com/usuario/repositorio"',
-    note: "Substitua 'usuario' pelo seu nome de usuário e 'repositorio' pelo nome do seu repositório",
+    title: "Conectar ao repositório remoto",
+    description: "Vincule seu projeto local ao repositório remoto com o comando abaixo:",
+    command: 'git remote add origin "https://seu-repositorio.git"',
+    note: "Substitua o endereço pelo URL real do seu repositório remoto",
     icon: <Link2 className="h-5 w-5" />,
   },
   {
@@ -106,23 +106,20 @@ function StepCard({ step }: { step: Step }) {
   )
 }
 
-export default function GitHubGuidePage() {
+export default function GitGuidePage() {
   return (
-    <div className="min-h-screen bg-white px-4 py-12">
-      <div className="mx-auto max-w-3xl">
-        {/* Header */}
+    <div className="min-h-screen bg-slate-950 px-4 py-12 text-slate-100">
+      <div className="mx-auto max-w-3xl">        {/* Header */}
         <div className="mb-12 text-center">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-4 py-2">
-            <GitBranch className="h-5 w-5 text-blue-700" />
-            <span className="text-sm font-medium text-slate-700">Guia Git & GitHub</span>
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900 px-4 py-2">
+            <GitBranch className="h-5 w-5 text-indigo-400" />
+            <span className="text-sm font-medium text-slate-200">Guia Git</span>
           </div>
-          <h1 className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl">
-            Como conectar o projeto do{" "}
-            <span className="text-blue-700">Visual Studio</span> no repositório do{" "}
-            <span className="text-blue-700">GitHub</span>
+          <h1 className="mb-4 text-3xl font-bold text-white md:text-4xl">
+            Conecte seu projeto ao repositório remoto com confiança
           </h1>
-          <p className="text-slate-600">
-            Siga este guia passo a passo para configurar o controle de versão no seu projeto
+          <p className="text-slate-400">
+            Siga este guia passo a passo para configurar o controle de versão do seu projeto.
           </p>
         </div>
 
