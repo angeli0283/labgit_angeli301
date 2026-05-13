@@ -6,6 +6,7 @@ type InputProps = InputHTMLAttributes<HTMLInputElement> & {
   error?: string;
 };
 
+
 export default function Input({ label, error, className, ...props }: InputProps) {
   return (
     <label className="space-y-2 text-sm text-slate-700">

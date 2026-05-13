@@ -8,6 +8,7 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 export default function Button({
   className,
   variant = "primary",
+  
   ...props
 }: ButtonProps) {
   return (

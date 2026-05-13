@@ -5,10 +5,12 @@ import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import { HiSearch, HiSparkles } from "react-icons/hi";
 
+
 import {
   Curriculo,
   getCurriculosFromStorage,
 } from "@/lib/curriculos";
+
 
 import Button from "@/app/componentes/ui/button";
 
