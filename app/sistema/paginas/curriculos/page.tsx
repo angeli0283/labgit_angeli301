@@ -19,8 +19,7 @@ export default function CurriculosPage() {
   useEffect(() => {
     const data: Curriculo[] =
       getCurriculosFromStorage() || [];
-
-    setCurriculos(data);
+  setCurriculos(data);
   }, []);
 
   const filteredCurriculos = useMemo(() => {
